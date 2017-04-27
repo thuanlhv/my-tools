@@ -1,3 +1,5 @@
+package main;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,13 +11,13 @@ import java.util.Map;
 
 public class ValueMapping {
     public static void main(String[] args) {
-        if (args.length != 2)
+        if (args.length != 3)
             throw new IllegalArgumentException("Following args are required \n 1st arg: baseline file, it must " +
                     "have this format key;value \n 2nd arg: input file which is needed to be replaced \n 3rd arg: " +
                     "output");
 
-        String input = args[0];
-        String baseline = args[1];
+        String baseline = args[0];
+        String input = args[1];
         String output = args[2];
 
         try {
